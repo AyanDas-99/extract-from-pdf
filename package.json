@@ -1,0 +1,22 @@
+{
+  "name": "extract-from-pdf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AyanDas-99/extract-from-pdf.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AyanDas-99/extract-from-pdf/issues"
+  },
+  "homepage": "https://github.com/AyanDas-99/extract-from-pdf#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
