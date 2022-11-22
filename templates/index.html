@@ -13,12 +13,13 @@
     <title>Extract from PDFs</title>
 
     <style>
-        .container{
+        .container {
             width: fit-content;
             border: 1px solid black;
             margin-top: 10em;
             padding: 1em;
         }
+
         .btn {
             width: 100%;
             margin: 1em 0;
@@ -28,11 +29,11 @@
 
 <body>
     <div class="container">
-        <form method="post" action="extract">
+        <form method="post" action="/extract" enctype="multipart/form-data">
             <h2>Extract from PDFs</h2>
             <div class="form-group">
                 <label for="exampleFormControlFile1"></label>
-                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                <input type="file" class="form-control-file" id="exampleFormControlFile1" accept=".pdf" name="pdf">
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
         </form>
