@@ -8,7 +8,7 @@ const options = {}; /* see below */
 var fs = require('fs');
 
 
-function pdfExtract(p) {
+function storeToFile(p) {
     pdfExtract.extract(p , options, (err, data) => {
         if (err) return console.log(err);
         //   console.log(data.pages[0].content);
@@ -37,4 +37,4 @@ function loging(data, fileName) {
 }
 
 
-module.exports = {pdfExtract}
+module.exports = {storeToFile}
