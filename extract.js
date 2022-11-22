@@ -9,13 +9,16 @@ var fs = require('fs');
 
 
 function storeToFile(p) {
-    pdfExtract.extract(p , options, (err, data) => {
+    d = new Date().getTime();
+    const Filename = d + '.txt';
+    console.log(Filename)
+    pdfExtract.extract(p, options, (err, data) => {
         if (err) return console.log(err);
         //   console.log(data.pages[0].content);
-        d = new Date().getTime();
-        loging(data, `public/${d}.txt`)
-
+        loging(data, `public/` + Filename)
     });
+
+    return Filename;
 }
 function loging(data, fileName) {
 
@@ -37,4 +40,4 @@ function loging(data, fileName) {
 }
 
 
-module.exports = {storeToFile}
+module.exports = { storeToFile }
