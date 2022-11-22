@@ -11,7 +11,8 @@ var fs = require('fs');
 pdfExtract.extract('test.pdf', options, (err, data) => {
     if (err) return console.log(err);
     //   console.log(data.pages[0].content);
-    loging(data, "nefile.txt")
+    d = new Date().getTime();
+    loging(data, `public/${d}.txt`)
 
 });
 
@@ -25,15 +26,11 @@ function loging(data, fileName) {
         data.pages.forEach(page => {
             page.content.forEach(element => {
                 // console.log(element.str);
-                stream.write(element.str+"\n");
+                stream.write(element.str + "\n");
             })
         });
 
 
         stream.end();
     });
-
-
-    saveStaticDataToFile(string);
 }
-
