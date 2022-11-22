@@ -8,14 +8,15 @@ const options = {}; /* see below */
 var fs = require('fs');
 
 
-pdfExtract.extract('test.pdf', options, (err, data) => {
-    if (err) return console.log(err);
-    //   console.log(data.pages[0].content);
-    d = new Date().getTime();
-    loging(data, `public/${d}.txt`)
+function pdfExtract(p) {
+    pdfExtract.extract(p , options, (err, data) => {
+        if (err) return console.log(err);
+        //   console.log(data.pages[0].content);
+        d = new Date().getTime();
+        loging(data, `public/${d}.txt`)
 
-});
-
+    });
+}
 function loging(data, fileName) {
 
 
@@ -34,3 +35,6 @@ function loging(data, fileName) {
         stream.end();
     });
 }
+
+
+module.exports = {pdfExtract}
